@@ -24,5 +24,5 @@ RUN apk add --update \
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_RESOURCE}.tar.gz /tmp/
 
 RUN tar xvzf /tmp/${HUGO_RESOURCE}.tar.gz -C /tmp/ \
-    && mv /tmp/${HUGO_BINARY}/${HUGO_BINARY} /usr/bin/hugo
+    && mv /tmp/${HUGO_BINARY}/${HUGO_BINARY} /usr/bin/hugo \
     && rm -rf /tmp/hugo*
